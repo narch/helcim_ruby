@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "httparty"
 
 module HelcimRuby
@@ -28,8 +30,7 @@ module HelcimRuby
       HelcimRuby::Resources::Cards.new(self, customer_id)
     end
 
-    def payment_plans
-    end
+    def payment_plans; end
 
     def default_headers
       {

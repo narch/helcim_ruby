@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # lib/helcim_ruby/configuration.rb
 module HelcimRuby
   class << self

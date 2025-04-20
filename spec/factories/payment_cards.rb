@@ -16,7 +16,7 @@ FactoryBot.define do
 
     trait :amex do
       card_number { "374245001751006" }
-      card_cvv { "1000" }  # AMEX uses 4-digit CVV
+      card_cvv { "1000" } # AMEX uses 4-digit CVV
     end
 
     trait :discover do
@@ -45,4 +45,4 @@ FactoryBot.define do
 
     initialize_with { attributes }
   end
-end 
+end

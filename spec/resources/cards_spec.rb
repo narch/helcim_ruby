@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
 RSpec.describe HelcimRuby::Resources::Cards do
@@ -38,9 +40,9 @@ RSpec.describe HelcimRuby::Resources::Cards do
     end
 
     it "raises an error with invalid customer id" do
-      expect {
+      expect do
         client.cards("INVALID123").list
-      }.to raise_error(HelcimRuby::Error)
+      end.to raise_error(HelcimRuby::Error)
     end
   end
 
@@ -51,15 +53,15 @@ RSpec.describe HelcimRuby::Resources::Cards do
     end
 
     it "raises an error with invalid customer id" do
-      expect {
+      expect do
         client.cards("invalid_id").set_default(card_id)
-      }.to raise_error(HelcimRuby::Error)
+      end.to raise_error(HelcimRuby::Error)
     end
 
     it "raises an error with invalid card id" do
-      expect {
+      expect do
         cards.set_default("invalid_card_id")
-      }.to raise_error(HelcimRuby::Error)
+      end.to raise_error(HelcimRuby::Error)
     end
   end
 
@@ -72,9 +74,9 @@ RSpec.describe HelcimRuby::Resources::Cards do
     # the card should no longer exist
     context "when card does not exist" do
       it "raises an error" do
-        expect {
+        expect do
           cards.destroy(delete_card_id)
-        }.to raise_error(HelcimRuby::Error)
+        end.to raise_error(HelcimRuby::Error)
       end
     end
   end

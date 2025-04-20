@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "json"
 
 module HelcimRuby
@@ -20,6 +22,7 @@ module HelcimRuby
 
     def error_message
       return nil if success?
+
       @body["message"] || raw_response.message
     end
 
@@ -30,7 +33,7 @@ module HelcimRuby
       when 404
         raise HelcimRuby::NotFoundError, "Resource not found"
       when 422
-        raise HelcimRuby::RequestFailedError, "Invalid request: #{@body['errors'] || raw_response.message}"
+        raise HelcimRuby::RequestFailedError, "Invalid request: #{@body["errors"] || raw_response.message}"
       else
         raise HelcimRuby::RequestFailedError, "API request failed: #{raw_response.message}"
       end
@@ -40,6 +43,7 @@ module HelcimRuby
 
     def parse_body(body)
       return {} if body.nil? || body.empty? # Handle 204 No Content
+
       JSON.parse(body)
     rescue JSON::ParserError
       body # Return raw string if not JSON

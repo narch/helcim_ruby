@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HelcimRuby
   module Utils
     def self.transform_to_camel_case(hash)
@@ -10,8 +12,6 @@ module HelcimRuby
       end
     end
 
-    private
-
     def self.transform_nested_value(value)
       case value
       when Hash then transform_to_camel_case(value)
@@ -21,7 +21,7 @@ module HelcimRuby
     end
 
     def self.camelize(string)
-      string.split('_').map.with_index { |word, i| i.zero? ? word : word.capitalize }.join
+      string.split("_").map.with_index { |word, i| i.zero? ? word : word.capitalize }.join
     end
   end
-end 
+end

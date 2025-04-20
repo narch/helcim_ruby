@@ -9,10 +9,10 @@ Gem::Specification.new do |spec|
   spec.email = ["nathan@nathan.la"]
 
   spec.summary = "A lightweight Ruby wrapper for the Helcim Commerce API"
-  spec.description = "HelcimRuby provides a simple interface to interact with Helcim's payment processing and commerce API"
+  spec.description = "HelcimRuby provides a simple interface to interact with Helcim's payment processing and commerce API."
   spec.homepage = "https://github.com/narch/helcim_ruby"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.7.8"
+  spec.required_ruby_version = ">= 3.1"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 

@@ -6,3 +6,13 @@ Style/StringLiterals:
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+Style/Documentation:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 15
+Naming/AccessorMethodName:
+  Enabled: false

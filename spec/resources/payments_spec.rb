@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
 RSpec.describe HelcimRuby::Resources::Payments do
   let(:client) { HelcimRuby::Client.new(ENV["HELCIM_API_TOKEN"]) }
   let(:connection) { described_class.new(client) }
-  let(:test_amount) { rand(100..10000) / 100.0 }
+  let(:test_amount) { rand(100..10_000) / 100.0 }
 
   # Please refer to the README.md file for more information about the testing environment
   let(:customer_code) { "CST1146" }
@@ -14,7 +16,7 @@ RSpec.describe HelcimRuby::Resources::Payments do
     context "with card token" do
       it "processes a purchase with valid card token" do
         response = connection.purchase(
-          amount: rand(100..10000) / 100.0,
+          amount: rand(100..10_000) / 100.0,
           currency: "USD",
           card_token: card_token,
           customer_code: customer_code,
@@ -29,7 +31,7 @@ RSpec.describe HelcimRuby::Resources::Payments do
 
       it "processes a purchase with different amount" do
         response = connection.purchase(
-          amount: rand(100..10000) / 100.0,
+          amount: rand(100..10_000) / 100.0,
           currency: "USD",
           card_token: card_token,
           customer_code: customer_code,
@@ -44,48 +46,48 @@ RSpec.describe HelcimRuby::Resources::Payments do
 
     context "with invalid data" do
       it "raises an error with missing amount" do
-        expect {
+        expect do
           connection.purchase(
             amount: nil,
             card_token: card_token,
             customer_code: customer_code,
             ip_address: "127.0.0.1"
           )
-        }.to raise_error(ArgumentError)
+        end.to raise_error(ArgumentError)
       end
 
       it "raises an error with missing card token" do
-        expect {
+        expect do
           connection.purchase(
-            amount: rand(100..10000) / 100.0,
+            amount: rand(100..10_000) / 100.0,
             card_token: nil,
             customer_code: customer_code,
             ip_address: "127.0.0.1"
           )
-        }.to raise_error(ArgumentError)
+        end.to raise_error(ArgumentError)
       end
 
       it "raises an error with invalid currency" do
-        expect {
+        expect do
           connection.purchase(
-            amount: rand(100..10000) / 100.0,
+            amount: rand(100..10_000) / 100.0,
             currency: "INVALID",
             card_token: card_token,
             customer_code: customer_code,
             ip_address: "127.0.0.1"
           )
-        }.to raise_error(HelcimRuby::Error)
+        end.to raise_error(HelcimRuby::Error)
       end
 
       it "raises an error with negative amount" do
-        expect {
+        expect do
           connection.purchase(
-            amount: -(rand(100..10000) / 100.0),
+            amount: -(rand(100..10_000) / 100.0),
             card_token: card_token,
             customer_code: customer_code,
             ip_address: "127.0.0.1"
           )
-        }.to raise_error(HelcimRuby::Error)
+        end.to raise_error(HelcimRuby::Error)
       end
     end
   end
@@ -110,13 +112,13 @@ RSpec.describe HelcimRuby::Resources::Payments do
 
     context "with invalid data" do
       it "raises an error with missing required fields" do
-        expect {
+        expect do
           connection.preauth(
             amount: nil,
             card_token: card_token,
             ip_address: "127.0.0.1"
           )
-        }.to raise_error(ArgumentError)
+        end.to raise_error(ArgumentError)
       end
     end
   end
@@ -176,12 +178,12 @@ RSpec.describe HelcimRuby::Resources::Payments do
     end
 
     it "raises an error with missing transaction_id" do
-      expect {
+      expect do
         connection.capture(
           transaction_id: nil,
           amount: amount
         )
-      }.to raise_error(ArgumentError)
+      end.to raise_error(ArgumentError)
     end
   end
 
@@ -235,21 +237,21 @@ RSpec.describe HelcimRuby::Resources::Payments do
 
     context "with invalid data" do
       it "raises an error with missing transaction_id" do
-        expect {
+        expect do
           connection.refund(
             transaction_id: nil,
             amount: 10.00
           )
-        }.to raise_error(ArgumentError)
+        end.to raise_error(ArgumentError)
       end
 
       it "raises an error with missing amount" do
-        expect {
+        expect do
           connection.refund(
             transaction_id: "33865254",
             amount: nil
           )
-        }.to raise_error(ArgumentError)
+        end.to raise_error(ArgumentError)
       end
     end
   end
@@ -304,9 +306,9 @@ RSpec.describe HelcimRuby::Resources::Payments do
     end
 
     it "raises an error with missing transaction_id" do
-      expect {
+      expect do
         connection.reverse(transaction_id: nil)
-      }.to raise_error(ArgumentError)
+      end.to raise_error(ArgumentError)
     end
   end
-end 
+end

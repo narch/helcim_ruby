@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module HelcimRuby
   class Collection
     include Enumerable
-    
+
     attr_reader :data, :total
 
     def self.from_response(response, type:)
@@ -41,4 +43,4 @@ module HelcimRuby
       data.size
     end
   end
-end 
+end

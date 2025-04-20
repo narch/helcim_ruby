@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HelcimRuby
   module Resources
     class Cards
@@ -37,4 +39,4 @@ module HelcimRuby
       end
     end
   end
-end 
+end

@@ -10,8 +10,9 @@ gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.0"
 gem "vcr", "~> 6.1"
-gem "webmock", "~> 3.18"
 gem "factory_bot", "~> 6.4"
+gem "webmock", "~> 3.18"
 
-gem "rubocop", "~> 1.21"
 gem "dotenv", "~> 2.8"
+gem "rubocop", "~> 1.21"
+

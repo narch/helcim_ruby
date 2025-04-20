@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "ostruct"
 
 module HelcimRuby
@@ -23,7 +25,7 @@ module HelcimRuby
     end
 
     def underscore(string)
-      string.gsub(/::/, '/')
+      string.gsub(/::/, "/")
             .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
             .gsub(/([a-z\d])([A-Z])/, '\1_\2')
             .tr("-", "_")
@@ -31,4 +33,4 @@ module HelcimRuby
             .to_sym
     end
   end
-end 
+end

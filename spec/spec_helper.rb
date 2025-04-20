@@ -4,7 +4,7 @@ require "dotenv/load"
 require "vcr"
 require "webmock/rspec"
 require "factory_bot"
-require 'helcim_ruby'
+require "helcim_ruby"
 
 # Configure FactoryBot
 RSpec.configure do |config|

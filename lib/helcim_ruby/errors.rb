@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HelcimRuby
   class Error < StandardError; end
   class UnauthorizedError < Error; end

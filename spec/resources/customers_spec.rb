@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
 RSpec.describe HelcimRuby::Resources::Customers do
@@ -12,7 +14,7 @@ RSpec.describe HelcimRuby::Resources::Customers do
   let(:customer_id) { "28630702" }
   let(:card_id) { "27567085" }
   let(:delete_card_id) { "27575187" }
-  
+
   describe "#list", :vcr do
     it "returns a list of customers" do
       response = connection.list(customer_code: customer_code, limit: 1)
@@ -60,7 +62,7 @@ RSpec.describe HelcimRuby::Resources::Customers do
 
     it "creates a new customer with business name" do
       response = connection.create(
-        business_name: "Test Company LLC",
+        business_name: "Test Company LLC"
       )
 
       expect(response).to be_a(HelcimRuby::Customer)
@@ -113,20 +115,20 @@ RSpec.describe HelcimRuby::Resources::Customers do
     end
 
     it "raises an error when neither contact_name nor business_name is provided" do
-      expect {
+      expect do
         connection.create(
           cellphone: "1234567890"
         )
-      }.to raise_error(HelcimRuby::Error)
+      end.to raise_error(HelcimRuby::Error)
     end
 
     it "raises an error with invalid data" do
-      expect {
+      expect do
         connection.create(
           contact_name: "",
           business_name: ""
         )
-      }.to raise_error(HelcimRuby::Error)
+      end.to raise_error(HelcimRuby::Error)
     end
   end
 
@@ -140,7 +142,7 @@ RSpec.describe HelcimRuby::Resources::Customers do
 
     it "retrieves a customer by ID" do
       response = connection.get(customer.id)
-      
+
       expect(response).to be_a(HelcimRuby::Customer)
       expect(response.id).to eq(customer.id)
       expect(response.business_name).to eq(customer_attributes[:business_name])
@@ -148,9 +150,9 @@ RSpec.describe HelcimRuby::Resources::Customers do
     end
 
     it "raises an error with invalid customer ID" do
-      expect {
+      expect do
         connection.get(0)
-      }.to raise_error(HelcimRuby::Error)
+      end.to raise_error(HelcimRuby::Error)
     end
   end
 
@@ -175,9 +177,9 @@ RSpec.describe HelcimRuby::Resources::Customers do
     end
 
     it "raises an error with invalid data" do
-      expect {
+      expect do
         connection.update(customer.id, contact_name: "")
-      }.to raise_error(HelcimRuby::Error)
+      end.to raise_error(HelcimRuby::Error)
     end
   end
 end

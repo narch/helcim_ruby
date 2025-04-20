@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HelcimRuby
   module Resources
     class Customers
@@ -7,13 +9,13 @@ module HelcimRuby
 
       def create(**params)
         transformed_params = HelcimRuby::Utils.transform_to_camel_case(params)
-        
+
         raw_response = @client.class.post(
           "/customers",
           headers: @client.default_headers,
           body: transformed_params.to_json
         )
-        
+
         response = HelcimRuby::Response.new(raw_response)
         response.raise_error unless response.success?
         Customer.new(response.parsed_body)

@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module HelcimRuby
   class << self
     attr_writer :configuration
-    
+
     def configuration
       @configuration ||= Configuration.new
     end

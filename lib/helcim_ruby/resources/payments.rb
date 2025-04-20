@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "securerandom"
 
 module HelcimRuby
@@ -23,25 +25,25 @@ module HelcimRuby
         raise ArgumentError, "Required arguments cannot be nil" if [transaction_id, amount].any?(&:nil?)
 
         post_payment("/payment/capture", {
-          pre_auth_transaction_id: transaction_id.to_s,
-          amount: amount.to_f,
-          currency: options[:currency] || HelcimRuby.configuration.default_currency,
-          ip_address: ip_address || "127.0.0.1"
-        })
+                       pre_auth_transaction_id: transaction_id.to_s,
+                       amount: amount.to_f,
+                       currency: options[:currency] || HelcimRuby.configuration.default_currency,
+                       ip_address: ip_address || "127.0.0.1"
+                     })
       end
 
       def refund(transaction_id:, amount:, ip_address: nil, **options)
         raise ArgumentError, "Required arguments cannot be nil" if [transaction_id, amount].any?(&:nil?)
 
         post_payment("/payment/refund", {
-          original_transaction_id: transaction_id.to_s,
-          amount: amount.to_f,
-          currency: options[:currency] || HelcimRuby.configuration.default_currency,
-          ip_address: ip_address || "127.0.0.1"
-        })
+                       original_transaction_id: transaction_id.to_s,
+                       amount: amount.to_f,
+                       currency: options[:currency] || HelcimRuby.configuration.default_currency,
+                       ip_address: ip_address || "127.0.0.1"
+                     })
       end
 
-      def reverse(transaction_id:, ip_address: nil, **options)
+      def reverse(transaction_id:, ip_address: nil, **_options)
         raise ArgumentError, "transaction_id cannot be nil" if transaction_id.nil?
 
         post_payment("/payment/reverse", {
@@ -68,7 +70,7 @@ module HelcimRuby
           amount: amount.to_f,
           currency: options[:currency] || HelcimRuby.configuration.default_currency,
           ip_address: ip_address,
-          ecommerce: options[:ecommerce].nil? ? true : options[:ecommerce],
+          ecommerce: options[:ecommerce].nil? || options[:ecommerce],
           card_data: {
             card_token: card_token
           },
