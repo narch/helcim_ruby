@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helcim.com/v2/customers
+    body:
+      encoding: UTF-8
+      string: '{"contactName":"","businessName":""}'
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:33:10 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '91'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=rDS3mpkR9PJt6TR8vcW7hFU2KI7vPc2DZid54l5zkIQ-1744317190-1.0.1.1-3M4yiXh3oYkZaBZ5IDE9M15U4feNkqNPx8a2iy4u8X0jOTVhHFFqzxCajj1IZ0e8Zngx69tWdYwxgR413_FVr3ia6IHXOWBOJ.fYaUy3zNSkyOFqLeQCg8ZIn.raMG4E;
+        path=/; expires=Thu, 10-Apr-25 21:03:10 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e5048759042378-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"errors":"Contact name or business name should be filled"}'
+  recorded_at: Thu, 10 Apr 2025 20:33:10 GMT
+recorded_with: VCR 6.3.1

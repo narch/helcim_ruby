@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.helcim.com/v2/connection-test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:29:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '91'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=HOmcJvABzfe6UGClUrP2DLFeRmFLrz6ar5J81KdFSGs-1744316977-1.0.1.1-U.6nZWC0s4XSYeRD8rolmbOhQyHT_G1l2qVb01alZJezZdLGOFNIY6mbEcHkDEz43WtLxrUm2zHdQ6GB_FSaa2FQlvezyh5vRXSlGYsBszL9Fu9mU5QGynPlvNOIYIFI;
+        path=/; expires=Thu, 10-Apr-25 20:59:37 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e4ff50591c535b-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"message":"Connected Successfully"}'
+  recorded_at: Thu, 10 Apr 2025 20:29:37 GMT
+recorded_with: VCR 6.3.1

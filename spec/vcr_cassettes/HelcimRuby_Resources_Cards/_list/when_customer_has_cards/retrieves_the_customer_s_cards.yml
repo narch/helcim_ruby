@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.helcim.com/v2/customers/28630702/cards
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:29:33 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '97'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=EadQYRnFoLWwkuy5posEjjRRa9ps58L_Owi.oh1y0dg-1744316973-1.0.1.1-.OT__bQHvGuKeiS54gKGEWawZmeJR7KowGr8SmtPNIrhwNEpPkE2wyVl1Wjrg1VXmTWC7A1ZrIwYxErEnj84vILyEkYIq1T2YD9es0DurO5q1OT24Ckt0CZFmqbiQtvJ;
+        path=/; expires=Thu, 10-Apr-25 20:59:33 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e4ff3b2ec92eeb-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":27567085,"cardHolderName":"John Doe","cardF6L4":"4124939990","cardToken":"cdeed21583e976f9ef4843","cardExpiry":"0128","dateCreated":"2025-04-09
+        10:30:14","dateUpdated":"2025-04-10 14:15:08","default":true},{"id":27602363,"cardHolderName":"Some
+        Dude","cardF6L4":"4000000028","cardToken":"b8cf2654a321edba5addad","cardExpiry":"0128","dateCreated":"2025-04-10
+        14:05:26","dateUpdated":"2025-04-10 14:05:26","default":false}]'
+  recorded_at: Thu, 10 Apr 2025 20:29:33 GMT
+recorded_with: VCR 6.3.1

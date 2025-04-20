@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helcim.com/v2/customers
+    body:
+      encoding: UTF-8
+      string: '{"contactName":"John Doe","billingAddress":{"name":"John Doe","street1":"123
+        Main St","street2":"Suite 101","city":"New York","province":"NY","country":"USA","postalCode":"10001"}}'
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:33:09 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '94'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=YDyhMfM_ENizOrKtz9VPUuKIwRp149CZ35.Az3ayQ80-1744317189-1.0.1.1-XzS6ugmraQRtl_oTvWM4RaZg5_cukxdzvF2D0N.FGdFo0NcaoWI2hP.lF5J6cnUS7QoED8BJ6PTJUlRE7LiRfSqQRHxm9lggpOryuOicKhTd0710kwtwY3LaPeXAQDY7;
+        path=/; expires=Thu, 10-Apr-25 21:03:09 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e5047bafae2f2f-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":28668966,"customerCode":"CST1312","businessName":"","contactName":"John
+        Doe","dateCreated":"2025-04-10 14:33:08","dateUpdated":"0000-00-00 00:00:00","cellphone":"","billingAddress":{"name":"John
+        Doe","street1":"123 Main St","street2":"Suite 101","city":"New York","province":"NY","country":"USA","postalCode":"10001","phone":"","email":""},"shippingAddress":"","cards":[]}'
+  recorded_at: Thu, 10 Apr 2025 20:33:09 GMT
+recorded_with: VCR 6.3.1

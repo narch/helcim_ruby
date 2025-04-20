@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helcim.com/v2/payment/purchase
+    body:
+      encoding: UTF-8
+      string: '{"amount":12.62,"currency":"USD","ipAddress":"127.0.0.1","ecommerce":true,"cardData":{"cardToken":"cdeed21583e976f9ef4843"},"customerCode":"CST1146"}'
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Idempotency-Key:
+      - 82494693-4872-4736-a41e-0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Apr 2025 17:21:09 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '100'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=obCtxYD0NB0Xsgup4T5cguV.BTp1ZwvY3WOVuiG5X54-1744392069-1.0.1.1-W4JOunphYktyO25.m.ldn1lBxQTv_eq6tb3EwkJBy4CJi06MUVvw3QdUXwcw43rYU8mtKxWSxTVT6y1DM1PZgJOYfbnAa_a9k5a13fjvdW_9KyYhHURmodsH76rUrnI4;
+        path=/; expires=Fri, 11-Apr-25 17:51:09 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92ec2895d997f79b-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"transactionId":33888440,"dateCreated":"2025-04-11 11:21:08","cardBatchId":4662020,"status":"APPROVED","user":"Helcim
+        System","type":"purchase","amount":12.62,"currency":"USD","avsResponse":"X","cvvResponse":"","cardType":"VI","approvalCode":"T7E8ST","cardToken":"cdeed21583e976f9ef4843","cardNumber":"4124939990","cardHolderName":"John
+        Doe","customerCode":"CST1146","invoiceNumber":"INV001125","warning":""}'
+  recorded_at: Fri, 11 Apr 2025 17:21:09 GMT
+recorded_with: VCR 6.3.1

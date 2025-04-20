@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helcim.com/v2/customers
+    body:
+      encoding: UTF-8
+      string: '{"contactName":"John Doe","businessName":"Sample Business"}'
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:33:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '85'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=ehkcwrTxTzZonGyZSF6ao1qrpOvB6lW5oOwyDc62S8Y-1744317193-1.0.1.1-6pCyRvbFdvqN4NEOwQD11IlULVupXXy1hTH0_Zbzaj6e2ZzVYRwwVvYIGu6_3JNDsaMKlNTGKdKM_uHKmi6Rde4BQG.kLMOP04RHJYCnJX9a4z2ONEqYIDsCnm9O2pSX;
+        path=/; expires=Thu, 10-Apr-25 21:03:13 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e5049aeda7527b-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":28668974,"customerCode":"CST1316","businessName":"Sample Business","contactName":"John
+        Doe","dateCreated":"2025-04-10 14:33:13","dateUpdated":"0000-00-00 00:00:00","cellphone":"","billingAddress":"","shippingAddress":"","cards":[]}'
+  recorded_at: Thu, 10 Apr 2025 20:33:13 GMT
+- request:
+    method: put
+    uri: https://api.helcim.com/v2/customers/28668974
+    body:
+      encoding: UTF-8
+      string: '{"id":28668974,"contact_name":""}'
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:33:14 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '84'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=a5C0Xbd9UbMdQWWSh4pnw.FWnGHzmFeeHQXuXseBRIQ-1744317194-1.0.1.1-0JL32LnPv30NR1Yac_AKsmtkKIDb0XGF34tr4gF_iiZevxWG6PJ7S1Dy7WEqcoJoHyQU_9hfvxy_TT218YcAGs8HwHIdTLRRCbzLuXm.0ieCwXgagNgJ4jA9qKZzx8p5;
+        path=/; expires=Thu, 10-Apr-25 21:03:14 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e5049ebf452eeb-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"errors":"Contact name or business name should be filled"}'
+  recorded_at: Thu, 10 Apr 2025 20:33:14 GMT
+recorded_with: VCR 6.3.1

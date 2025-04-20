@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helcim.com/v2/payment/purchase
+    body:
+      encoding: UTF-8
+      string: '{"amount":95.85,"currency":"INVALID","ipAddress":"127.0.0.1","ecommerce":true,"cardData":{"cardToken":"cdeed21583e976f9ef4843"},"customerCode":"CST1146"}'
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Idempotency-Key:
+      - 85cf1a1a-ff25-45ed-8964-3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Fri, 11 Apr 2025 17:21:12 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '98'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=6RZlq7Mo2By2h6.0Q.ETYczr8w0beF_xnek5OZd_9Qk-1744392072-1.0.1.1-hgJ0yMmZ4qHF7epa5EybDRTXMs8hvHVR18DFBMOx.uEgBddnWnFr7pMm_Ud3HLVTadIF7FRpBbdnt5eyJ1arf82EfGLBtSXBHIyrRHsNHztK2M6ZLBaPgb.UncDp_ZUI;
+        path=/; expires=Fri, 11-Apr-25 17:51:12 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92ec28b03a9928fa-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"errors":{"currency":"currency (INVALID) must be a valid Constant"}}'
+  recorded_at: Fri, 11 Apr 2025 17:21:12 GMT
+recorded_with: VCR 6.3.1

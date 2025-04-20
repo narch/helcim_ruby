@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.helcim.com/v2/customers?customerCode=CST1146&includeCards=yes&limit=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:33:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '99'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=SA9fd2.uY_ttLvgayIYlKe0oUL0QPZGbLDmpSeUOEOk-1744317185-1.0.1.1-F4C6h.TlT2Jb9XTtFGF_2POJobk6sWx2aLnPJoZhEg4YVAS4emy9tDvBm5L7Vyij.34eumM7HxHITpmklBwlW8RovH3zKdYMT_yvc3NpC2dntWADAAQLjwUz7QXxjasR;
+        path=/; expires=Thu, 10-Apr-25 21:03:05 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e5046989dd2f33-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":28630702,"customerCode":"CST1146","businessName":"","contactName":"Card
+        Token Test User","dateCreated":"2025-04-09 10:30:15","dateUpdated":"2025-04-09
+        12:20:34","cellphone":"","billingAddress":"","shippingAddress":"","cards":[{"id":27567085,"cardHolderName":"John
+        Doe","cardF6L4":"4124939990","cardToken":"cdeed21583e976f9ef4843","cardExpiry":"0128","dateCreated":"2025-04-09
+        10:30:14","dateUpdated":"2025-04-10 14:29:49","default":true}]}]'
+  recorded_at: Thu, 10 Apr 2025 20:33:06 GMT
+recorded_with: VCR 6.3.1

@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.helcim.com/v2/customers
+    body:
+      encoding: UTF-8
+      string: '{"contactName":"John Doe","businessName":"Sample Business"}'
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:33:11 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '90'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=BuE0agqpeM5TxJ9WONYQr.J2A5SJFODEq3Au7GjTtp8-1744317191-1.0.1.1-EV5b1O7dqPW8C4fug5RO8VRRMwDQAoFM4BrbRyFMF.WHi_9FcnZ95gx.89RRwVdHyNtJaRXbMs8GhrIeizBi8ZYDfCpDXIfGVTDJRbjuf6e83ZRIXgibsy2Ym7OI_U_P;
+        path=/; expires=Thu, 10-Apr-25 21:03:11 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e5048a59675027-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":28668971,"customerCode":"CST1314","businessName":"Sample Business","contactName":"John
+        Doe","dateCreated":"2025-04-10 14:33:11","dateUpdated":"0000-00-00 00:00:00","cellphone":"","billingAddress":"","shippingAddress":"","cards":[]}'
+  recorded_at: Thu, 10 Apr 2025 20:33:11 GMT
+- request:
+    method: get
+    uri: https://api.helcim.com/v2/customers/28668971
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:33:11 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '89'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=06rhawwPopRi6K2iH95QUuSh4gl4arLGiyc97DEYj2Q-1744317191-1.0.1.1-GrV0R4g3dKjIE8kras7kYsF1jTVDNeugq9pq69sMoPt4noC6DLRaW_o.LURJq6OWigA_6ELvgYR8Qur8CIcfmegmtl8pWMIWWQ6KrPs7HIysvEyXOAWlZm2os1tApRMu;
+        path=/; expires=Thu, 10-Apr-25 21:03:11 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e5048d892249d4-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":28668971,"customerCode":"CST1314","businessName":"Sample Business","contactName":"John
+        Doe","dateCreated":"2025-04-10 14:33:11","dateUpdated":"2025-04-10 14:33:11","cellphone":"","billingAddress":"","shippingAddress":"","cards":[]}'
+  recorded_at: Thu, 10 Apr 2025 20:33:11 GMT
+recorded_with: VCR 6.3.1

@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api.helcim.com/v2/customers/28630702/cards/invalid_card_id/default
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:29:35 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '94'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=V4zZ4tIQF35kTSkNM.BZCNZOiDFs1FH83lWbvWwFvXU-1744316975-1.0.1.1-0jlHZ6L_VawzCatwANTbGKkgfBji_E0W7HLC8owwsBdg49_263uIFLl6vi8gM2i1R1ah6S5hB8PAt0ah1t2WMzCYbzuERlKxt.DYgZjpDmwRxcpW5Dq_lwJjDYdobIxH;
+        path=/; expires=Thu, 10-Apr-25 20:59:35 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e4ff4638965233-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"errors":"Invalid card id."}'
+  recorded_at: Thu, 10 Apr 2025 20:29:35 GMT
+recorded_with: VCR 6.3.1

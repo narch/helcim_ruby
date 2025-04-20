@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.helcim.com/v2/customers?customerCode=CST1146
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:33:06 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '98'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=e6Toreh5XKywa2zPxBOaxbJ0AQPWTr0w3dk9e_bsQGI-1744317186-1.0.1.1-D2bLvl.49NEp7C_Benx8.a6N_ET1BNkxRF4y4y2K18LBRe6Pb_E1qr3yox5xYFOMfPG30_D10yPJ.aS5Mv7H9PjTgGT30p7cO77yQ3VyUEwaLSRA_76k7_tBovFQQFnM;
+        path=/; expires=Thu, 10-Apr-25 21:03:06 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e5046ebcac7c3d-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":28630702,"customerCode":"CST1146","businessName":"","contactName":"Card
+        Token Test User","dateCreated":"2025-04-09 10:30:15","dateUpdated":"2025-04-09
+        12:20:34","cellphone":"","billingAddress":"","shippingAddress":"","cards":[]}]'
+  recorded_at: Thu, 10 Apr 2025 20:33:06 GMT
+recorded_with: VCR 6.3.1

@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api.helcim.com/v2/customers/invalid_id/cards/27567085/default
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Api-Token:
+      - "<API_TOKEN>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 10 Apr 2025 20:29:34 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Origin, Content-Type, X-Auth-Token, js-token
+      Access-Control-Max-Age:
+      - '600'
+      Hour-Limit-Remaining:
+      - '3000'
+      Minute-Limit-Remaining:
+      - '95'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=1uZTqvwReD0pm7HUiyHW7RgGx4_tf9LlnONFOXtnq8s-1744316974-1.0.1.1-I42kH_dNfCT_Jo.gZLJz_40uR5gCQ2E2aYP9APqXYvyrgH5Za9flzZFFShbw_odcw7WwbvlSPbLFvbC1UUPvlbeF56RouFT_IuSrpwfm6.tQF1HMzwX3XJ8yl4GYVXM0;
+        path=/; expires=Thu, 10-Apr-25 20:59:34 GMT; domain=.helcim.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 92e4ff418b3f0ffc-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":"Invalid customerId"}'
+  recorded_at: Thu, 10 Apr 2025 20:29:34 GMT
+recorded_with: VCR 6.3.1
